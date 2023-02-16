@@ -1,0 +1,35 @@
+Tapway:
+
+Entity:
+    Producer
+    Queue
+    Consumer
+
+Chosen_Architecture:
+    Event_Driven_Architecture
+
+Rough_Functionality:
+    API: Python Flask
+    Interface:
+        Overengineer with typescript?
+        bootstrap, tableview?
+        backend without interface?
+    Messaging_Queue: RabbitMQ
+    Listener:
+    Backend_Interface:
+        With basic interface?
+        If with interface, should we further overengineer? Typescript?
+        overengineer with bootstrap, tableview?
+    DB:
+        Persistent or otherwise?
+    Docker:
+        Compose all 3 entity
+    Git:
+        Gradual push for more organic feeling of development?
+        Finish it locally then push?
+    TDD:
+    Kubernetes:
+        Should emulate failing to observe recovering scenario?
+        Dive deeper into kubernetes functionality?
+        Composing with kubernetes conflict with docker compose, going against instruction is not good?
+

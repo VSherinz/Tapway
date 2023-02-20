@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: "FootageProducer"
+    build: ./Producer
+    ports:
+      - "5001:5001"
+    env_file:
+      - Environments/shared.env
+    environment:
+      - PRODUCER_PORT=5001
+      - PRODUCER_HOST="0.0.0.0"
+      - LOG=dev.x
+    command: uvicorn Producer.src.main:app --reload --host 0.0.0.0 --port 5001
+
+  consumer:
+    container_name: "FootageConsumer"
+    build: ./Consumer
+    ports:
+      - "5002:5002"
+    env_file:
+      - Environments/shared.env
+    environment:
+      - LOG=dev.x
+
+  queue:
+    container_name: "RabbitQueue"
+    image: "rabbitmq:3.9-management"
+    env_file:
+      - Environments/shared.env
+    ports:
+      - "5672:5672"
+      - "15672:15672"

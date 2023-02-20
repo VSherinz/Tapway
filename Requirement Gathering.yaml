@@ -1,0 +1,52 @@
+Tapway:
+
+Entity:
+    Producer
+    Queue
+    Consumer
+
+Chosen_Architecture:
+    Event_Driven_Architecture
+
+Rough_Functionality:
+    API: Python FastAPI
+    Interface:
+        Overengineer with typescript?
+        bootstrap, tableview?
+        backend without interface?
+    Messaging_Queue: RabbitMQ
+    Listener:
+    Backend_Interface:
+        With basic interface?
+        If with interface, should we further overengineer? Typescript?
+        overengineer with bootstrap, tableview?
+    DB:
+        Persistent or otherwise?
+    Docker:
+        Compose all 3 entity
+    Git:
+        Gradual push for more organic feeling of development?
+        Finish it locally then push?
+    TDD:
+    Kubernetes:
+        Should emulate failing to observe recovering scenario?
+        Dive deeper into kubernetes functionality?
+        Composing with kubernetes conflict with docker compose, going against instruction is not good?
+
+Final_Product:
+    Entity: [Producer, Consumer, RabbitMQ]
+    Logging: [console, filehandler]
+    Data: Single, via postman or newman CLI
+
+Future_Enhancement:
+    Frontend: [javascript, html, css, web framework choices]
+    Storage: Persistent or otherwise
+    Kubernetes: Manage growing services and load balance
+    Terraform: Automate architectural changes
+    Test: [automated through postman collection CLI, testing suite for both frontend and backend, UI test suite of choice like ghost inspector]
+    MQ: Asynchronous - Further test need to be done to see how cases such as 1000 message body would affect current architecture (if complete)
+    Container_Registry: ECS? Docker Registry?
+    Further_Architecture: CQRS - NoSQL along RDBMS?
+    CI/CD: How, fully integrate with Azure Devops? AWS?
+
+
